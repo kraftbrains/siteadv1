@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   basePath,
   assetPrefix,
   trailingSlash: true,
-  generateBuildId: async () => "static", // buildId fixo para garantir caminhos consistentes
+  // Removido generateBuildId para evitar pasta extra 'static' nos assets
 };
 
 export default nextConfig;
