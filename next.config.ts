@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   output: 'export',
   basePath,
   assetPrefix,
-  // Garante que os caminhos dos assets sejam relativos ao basePath
   trailingSlash: true,
+  generateBuildId: async () => "static", // buildId fixo para garantir caminhos consistentes
 };
 
 export default nextConfig;
