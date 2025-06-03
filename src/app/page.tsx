@@ -4,7 +4,7 @@ export default function Home() {
       <header className="bg-blue-900 text-white py-6 shadow-md">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
           <div className="flex items-center gap-3">
-            <img src="/globe.svg" alt="Logo" width={40} height={40} />
+            <img src="/siteadv1/globe.svg" alt="Logo" width={40} height={40} />
             <span className="text-2xl font-bold tracking-tight">Dr. João Silva</span>
           </div>
           <nav className="mt-4 sm:mt-0 flex gap-6 text-lg">
@@ -17,7 +17,7 @@ export default function Home() {
 
       <main className="flex-1 container mx-auto px-4 py-10">
         <section className="flex flex-col md:flex-row items-center gap-10 mb-16" id="sobre">
-          <img src="/file.svg" alt="Advogado" width={180} height={180} className="rounded-full border-4 border-blue-900 shadow-lg" />
+          <img src="/siteadv1/file.svg" alt="Advogado" width={180} height={180} className="rounded-full border-4 border-blue-900 shadow-lg" />
           <div>
             <h1 className="text-4xl font-bold mb-4">Dr. João Silva</h1>
             <h2 className="text-xl font-semibold mb-2 text-blue-900">OAB/SP 123456</h2>
@@ -30,17 +30,17 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-blue-900">Áreas de Atuação</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-              <img src="/window.svg" alt="Direito Civil" width={48} height={48} className="mb-4" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" alt="Direito Civil" width={48} height={48} className="mb-4" />
               <h3 className="text-xl font-semibold mb-2">Direito Civil</h3>
               <p className="text-center">Contratos, responsabilidade civil, indenizações, cobranças, inventários e partilhas.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-              <img src="/next.svg" alt="Direito de Família" width={48} height={48} className="mb-4" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Direito de Família" width={48} height={48} className="mb-4" />
               <h3 className="text-xl font-semibold mb-2">Direito de Família</h3>
               <p className="text-center">Divórcios, pensão alimentícia, guarda, regulamentação de visitas, união estável.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-              <img src="/vercel.svg" alt="Direito do Consumidor" width={48} height={48} className="mb-4" />
+              <img src="https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" alt="Direito do Consumidor" width={48} height={48} className="mb-4" />
               <h3 className="text-xl font-semibold mb-2">Direito do Consumidor</h3>
               <p className="text-center">Defesa do consumidor, ações contra empresas, vícios de produtos e serviços.</p>
             </div>
