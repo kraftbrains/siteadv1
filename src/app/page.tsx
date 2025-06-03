@@ -1,10 +1,18 @@
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-gray-50 text-gray-900">
-      <header className="bg-blue-900 text-white py-6 shadow-md">
-        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+      <header className="bg-blue-900 text-white py-6 shadow-md relative">
+        {/* Background sóbrio no topo */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+            alt="Background Direito"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4 relative z-10">
           <div className="flex items-center gap-3">
-            <img src="globe.svg" alt="Logo" width={40} height={40} />
+            <img src="/globe.svg" alt="Logo" width={40} height={40} />
             <span className="text-2xl font-bold tracking-tight">Dr. João Silva</span>
           </div>
           <nav className="mt-4 sm:mt-0 flex gap-6 text-lg">
@@ -17,7 +25,14 @@ export default function Home() {
 
       <main className="flex-1 container mx-auto px-4 py-10">
         <section className="flex flex-col md:flex-row items-center gap-10 mb-16" id="sobre">
-          <img src="file.svg" alt="Advogado" width={180} height={180} className="rounded-full border-4 border-blue-900 shadow-lg" />
+          {/* Foto real de advogado */}
+          <img
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400&facepad=2&q=80"
+            alt="Advogado"
+            width={180}
+            height={180}
+            className="rounded-full border-4 border-blue-900 shadow-lg object-cover"
+          />
           <div>
             <h1 className="text-4xl font-bold mb-4">Dr. João Silva</h1>
             <h2 className="text-xl font-semibold mb-2 text-blue-900">OAB/SP 123456</h2>
@@ -30,17 +45,20 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-blue-900">Áreas de Atuação</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" alt="Direito Civil" width={48} height={48} className="mb-4" />
+              {/* Imagem real Direito Civil */}
+              <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=200&q=80" alt="Direito Civil" width={64} height={64} className="mb-4 rounded" />
               <h3 className="text-xl font-semibold mb-2">Direito Civil</h3>
               <p className="text-center">Contratos, responsabilidade civil, indenizações, cobranças, inventários e partilhas.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Direito de Família" width={48} height={48} className="mb-4" />
+              {/* Imagem real Direito de Família */}
+              <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=200&q=80" alt="Direito de Família" width={64} height={64} className="mb-4 rounded" />
               <h3 className="text-xl font-semibold mb-2">Direito de Família</h3>
               <p className="text-center">Divórcios, pensão alimentícia, guarda, regulamentação de visitas, união estável.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-              <img src="https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" alt="Direito do Consumidor" width={48} height={48} className="mb-4" />
+              {/* Imagem real Direito do Consumidor */}
+              <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?auto=format&fit=crop&w=200&q=80" alt="Direito do Consumidor" width={64} height={64} className="mb-4 rounded" />
               <h3 className="text-xl font-semibold mb-2">Direito do Consumidor</h3>
               <p className="text-center">Defesa do consumidor, ações contra empresas, vícios de produtos e serviços.</p>
             </div>
@@ -68,6 +86,21 @@ export default function Home() {
             <p><strong>E-mail:</strong> joao.silva@adv.br</p>
             <p><strong>Telefone:</strong> (11) 99999-9999</p>
             <p><strong>Endereço:</strong> Av. Paulista, 1000 - São Paulo/SP</p>
+            {/* Ícone WhatsApp */}
+            <div className="flex justify-center mt-6">
+              <a
+                href="https://wa.me/5541995296747"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded shadow transition"
+                title="Fale conosco pelo WhatsApp"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path fill="#fff" d="M12 2C6.477 2 2 6.477 2 12c0 1.85.504 3.62 1.46 5.17L2 22l4.97-1.44A9.953 9.953 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm0 18c-1.61 0-3.19-.43-4.56-1.25l-.32-.19-2.95.86.84-2.88-.21-.33A7.96 7.96 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8Zm4.13-5.47c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12-.15.23-.58.75-.71.9-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.13-.68-.6-1.14-1.34-1.28-1.57-.13-.23-.01-.35.1-.46.1-.1.23-.26.34-.39.11-.13.15-.23.23-.38.08-.15.04-.29-.02-.41-.06-.12-.51-1.23-.7-1.68-.18-.44-.37-.38-.51-.39-.13-.01-.29-.01-.45-.01-.16 0-.41.06-.62.29-.21.23-.81.79-.81 1.93 0 1.14.83 2.25.95 2.41.12.15 1.63 2.5 3.95 3.4.55.19.98.3 1.31.38.55.13 1.05.11 1.44.07.44-.05 1.36-.56 1.55-1.1.19-.54.19-1 .13-1.1-.06-.1-.21-.16-.44-.28Z"/>
+                </svg>
+                WhatsApp: (41) 99529-6747
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -75,6 +108,21 @@ export default function Home() {
       <footer className="bg-blue-900 text-white py-4 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Dr. João Silva - Todos os direitos reservados.</p>
       </footer>
+
+      {/* Botão WhatsApp fixo à direita */}
+      <a
+        href="https://wa.me/5541995296747"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#618200] hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-full shadow-lg transition"
+        title="Fale conosco pelo WhatsApp"
+        style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.18)' }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24">
+          <path fill="#fff" d="M12 2C6.477 2 2 6.477 2 12c0 1.85.504 3.62 1.46 5.17L2 22l4.97-1.44A9.953 9.953 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm0 18c-1.61 0-3.19-.43-4.56-1.25l-.32-.19-2.95.86.84-2.88-.21-.33A7.96 7.96 0 0 1 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8Zm4.13-5.47c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12-.15.23-.58.75-.71.9-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.13-.68-.6-1.14-1.34-1.28-1.57-.13-.23-.01-.35.1-.46.1-.1.23-.26.34-.39.11-.13.15-.23.23-.38.08-.15.04-.29-.02-.41-.06-.12-.51-1.23-.7-1.68-.18-.44-.37-.38-.51-.39-.13-.01-.29-.01-.45-.01-.16 0-.41.06-.62.29-.21.23-.81.79-.81 1.93 0 1.14.83 2.25.95 2.41.12.15 1.63 2.5 3.95 3.4.55.19.98.3 1.31.38.55.13 1.05.11 1.44.07.44-.05 1.36-.56 1.55-1.1.19-.54.19-1 .13-1.1-.06-.1-.21-.16-.44-.28Z"/>
+        </svg>
+        WhatsApp
+      </a>
     </div>
   );
 }
