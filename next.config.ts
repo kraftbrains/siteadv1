@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Habilita exportação estática
-  basePath: "/siteadv1", // Substitua pelo nome do repositório do GitHub
-  images: {
-    unoptimized: true, // Necessário para exportação estática
-  },
+  output: 'export',
+  basePath: "/siteadv1",
 };
 
 module.exports = nextConfig;
+
