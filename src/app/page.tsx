@@ -4,7 +4,7 @@ export default function Home() {
       <header className="bg-blue-900 text-white py-6 shadow-md">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
           <div className="flex items-center gap-3">
-            <img src="/siteadv1/globe.svg" alt="Logo" width={40} height={40} />
+            <img src="globe.svg" alt="Logo" width={40} height={40} />
             <span className="text-2xl font-bold tracking-tight">Dr. João Silva</span>
           </div>
           <nav className="mt-4 sm:mt-0 flex gap-6 text-lg">
@@ -17,7 +17,7 @@ export default function Home() {
 
       <main className="flex-1 container mx-auto px-4 py-10">
         <section className="flex flex-col md:flex-row items-center gap-10 mb-16" id="sobre">
-          <img src="/siteadv1/file.svg" alt="Advogado" width={180} height={180} className="rounded-full border-4 border-blue-900 shadow-lg" />
+          <img src="file.svg" alt="Advogado" width={180} height={180} className="rounded-full border-4 border-blue-900 shadow-lg" />
           <div>
             <h1 className="text-4xl font-bold mb-4">Dr. João Silva</h1>
             <h2 className="text-xl font-semibold mb-2 text-blue-900">OAB/SP 123456</h2>
