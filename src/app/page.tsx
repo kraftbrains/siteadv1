@@ -3,7 +3,7 @@ import { FaBalanceScale, FaUsers, FaShoppingCart } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-gray-50 text-gray-900">
-      <header className="bg-blue-900 text-white py-6 shadow-md relative">
+      <header className="bg-gray-800 text-white py-6 shadow-md relative">
         {/* Background sóbrio no topo */}
         <div className="absolute inset-0 w-full h-full z-0">
           <img
@@ -14,10 +14,10 @@ export default function Home() {
         </div>
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4 relative z-10">
           <div className="flex items-center gap-3">
-            <img src="/siteadv1/justica-ambiental.png" alt="Logo" width={40} height={40} />
+            <img src="/siteadv1/justica-ambiental.png" alt="Logo" style={{ width: 55, height: 55 }} className="-my-2" />
             <span className="text-2xl font-bold tracking-tight">Dr. Glauco Menezes</span>
           </div>
-          <nav className="mt-4 sm:mt-0 flex gap-6 text-lg">
+          <nav className="mt-4 sm:mt-0 flex gap-6 text-lg text-center sm:text-left">
             <a href="#sobre" className="hover:underline">Sobre</a>
             <a href="#atuacao" className="hover:underline">Áreas de Atuação</a>
             <a href="#contato" className="hover:underline">Contato</a>
@@ -26,50 +26,56 @@ export default function Home() {
       </header>
 
       <main className="flex-1 container mx-auto px-4 py-10">
-        <section className="flex flex-col md:flex-row items-center gap-10 mb-16" id="sobre">
+        <section className="flex flex-col md:flex-row items-center gap-10 mb-16 text-center md:text-left" id="sobre">
           {/* Foto real de advogado */}
           <img
             src="/siteadv1/fotoAdvogado.jpg"
             alt="Advogado"
             width={180}
             height={240}
-            className="rounded-lg border-4 border-blue-900 shadow-lg object-cover object-top"
+            className="rounded-lg border-4 border-gray-800 shadow-lg object-cover object-top"
             style={{ aspectRatio: '3/4' }}
           />
           <div>
             <h1 className="text-4xl font-bold mb-4">Dr. Glauco Menezes</h1>
-            <h2 className="text-xl font-semibold mb-2 text-blue-900">OAB/SP 123456</h2>
+            <h2 className="text-xl font-semibold mb-2 text-gray-800">OAB/SP 123456</h2>
             <p className="text-lg mb-2">Advogado especializado em Direito Civil, com mais de 15 anos de experiência atendendo pessoas físicas e jurídicas.</p>
-            <p className="text-lg">Atendimento personalizado, ética e compromisso com resultados.</p>
+            <p className="text-lg mb-2">Atuo com dedicação, ética e profundo conhecimento jurídico, buscando sempre as melhores soluções para meus clientes. Meu compromisso é oferecer um atendimento personalizado, transparente e eficiente, acompanhando cada etapa do processo e esclarecendo todas as dúvidas.</p>
+            <p className="text-lg">Seja para questões consultivas ou contenciosas, estou preparado para defender seus interesses com seriedade e responsabilidade.</p>
           </div>
         </section>
 
         <section className="mb-16" id="atuacao">
-          <h2 className="text-3xl font-bold mb-6 text-blue-900">Áreas de Atuação</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">Áreas de Atuação</h2>
+          <p className="text-lg mb-8 text-gray-700 max-w-3xl mx-auto text-center">Com ampla experiência e constante atualização, ofereço assessoria jurídica completa em diversas áreas do Direito. Conheça um pouco mais sobre cada especialidade e como posso ajudar você ou sua empresa a resolver demandas jurídicas com segurança e eficiência.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
               {/* Ícone Direito Civil */}
-              <FaBalanceScale size={48} className="mb-4 text-blue-900" />
+              <FaBalanceScale size={48} className="mb-4 text-gray-800" />
               <h3 className="text-xl font-semibold mb-2">Direito Civil</h3>
-              <p className="text-center">Contratos, responsabilidade civil, indenizações, cobranças, inventários e partilhas.</p>
+              <p className="text-center mb-2">Contratos, responsabilidade civil, indenizações, cobranças, inventários e partilhas.</p>
+              <p className="text-sm text-gray-600 text-center">Atuação em elaboração, revisão e análise de contratos, defesa em ações de indenização, cobrança judicial e extrajudicial, além de processos de inventário e partilha de bens. Soluções jurídicas para pessoas físicas e empresas.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
               {/* Ícone Direito de Família */}
-              <FaUsers size={48} className="mb-4 text-blue-900" />
+              <FaUsers size={48} className="mb-4 text-gray-800" />
               <h3 className="text-xl font-semibold mb-2">Direito de Família</h3>
-              <p className="text-center">Divórcios, pensão alimentícia, guarda, regulamentação de visitas, união estável.</p>
+              <p className="text-center mb-2">Divórcios, pensão alimentícia, guarda, regulamentação de visitas, união estável.</p>
+              <p className="text-sm text-gray-600 text-center">Aconselhamento e atuação em processos de separação, divórcio consensual ou litigioso, definição de guarda e visitas, reconhecimento e dissolução de união estável, além de ações de alimentos e regulamentação de convivência familiar.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
               {/* Ícone Direito do Consumidor */}
-              <FaShoppingCart size={48} className="mb-4 text-blue-900" />
+              <FaShoppingCart size={48} className="mb-4 text-gray-800" />
               <h3 className="text-xl font-semibold mb-2">Direito do Consumidor</h3>
-              <p className="text-center">Defesa do consumidor, ações contra empresas, vícios de produtos e serviços.</p>
+              <p className="text-center mb-2">Defesa do consumidor, ações contra empresas, vícios de produtos e serviços.</p>
+              <p className="text-sm text-gray-600 text-center">Atuação em demandas judiciais e extrajudiciais para garantir os direitos do consumidor, como problemas com compras, contratos, cobranças indevidas, produtos com defeito e má prestação de serviços. Orientação completa para consumidores e fornecedores.</p>
             </div>
           </div>
         </section>
 
         <section className="mb-16" id="contato">
-          <h2 className="text-3xl font-bold mb-6 text-blue-900">Contato</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">Contato</h2>
+          <p className="text-lg mb-8 text-gray-700 max-w-2xl mx-auto text-center">Entre em contato para agendar uma consulta, esclarecer dúvidas ou obter mais informações sobre os serviços jurídicos oferecidos. O atendimento é realizado de forma personalizada, com total sigilo e respeito à sua necessidade.</p>
           <form className="bg-white rounded-lg shadow p-8 max-w-xl mx-auto flex flex-col gap-4">
             <div>
               <label htmlFor="nome" className="block font-semibold mb-1">Nome</label>
@@ -83,7 +89,7 @@ export default function Home() {
               <label htmlFor="mensagem" className="block font-semibold mb-1">Mensagem</label>
               <textarea id="mensagem" name="mensagem" rows={4} className="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
             </div>
-            <button type="submit" className="bg-blue-900 text-white font-semibold rounded px-6 py-2 hover:bg-blue-800 transition">Enviar</button>
+            <button type="submit" className="bg-gray-800 text-white font-semibold rounded px-6 py-2 hover:bg-gray-700 transition">Enviar</button>
           </form>
           <div className="text-center mt-8 text-lg">
             <p><strong>E-mail:</strong> glauco.menezes@adv.br</p>
@@ -94,7 +100,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-blue-900 text-white py-4 text-center mt-8">
+      <footer className="bg-gray-800 text-white py-4 text-center mt-8">
         <p>&copy; {new Date().getFullYear()} Dr. Glauco Menezes - Todos os direitos reservados.</p>
       </footer>
 
@@ -103,7 +109,7 @@ export default function Home() {
         href="https://wa.me/5541995296747"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#618200] hover:bg-green-600 text-white font-semibold px-4 py-3 rounded-full shadow-lg transition"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#618200] hover:bg-gray-700 text-white font-semibold px-4 py-3 rounded-xl shadow-lg transition"
         title="Fale conosco pelo WhatsApp"
         style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.18)' }}
       >
